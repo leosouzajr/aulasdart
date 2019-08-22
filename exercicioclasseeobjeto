@@ -1,0 +1,36 @@
+
+void main() {
+   
+  Pessoa pessoa2 = Pessoa("Leonardo",70.0, idade:30); 
+    print("O peso  do objeto pessoa2 de nome ${pessoa2.obterNome} é ${pessoa2.peso} quilos");
+    //instanciar objeto de uma classe
+  
+  }
+
+//criação da classe
+class Pessoa{
+  //uso de variavel privada, uso somente dentro da propria classe
+  String _nome; 
+  
+  
+  double peso;
+  int idade;
+  
+  //criação do construtor da classe
+  Pessoa(String nome, double peso, {int idade}){
+   this._nome = nome;
+   this.peso = peso;
+   this.idade = idade;
+  }
+  
+  //metodo com retorno String e sem parâmetro
+  String get obterNome{
+    //retorno do método
+    return _nome;
+  }
+  //metodo sem retorno e com um parâmetro double(peso a ganhar)
+  void ganharPeso(double peso){
+   this.peso = this.peso + peso;
+  }
+ 
+}
